@@ -1,6 +1,8 @@
-export type TutorialType = "Tutorial" | "Subject" | "Topic";
+export type TutorialType = 'Tutorial' | 'Subject' | 'Topic';
 
 export interface IBaseTable {
+  appKey?: string;
+  sortKey?: string;
   uid: string;
   createDate: string;
   updatedDate: string;
@@ -33,4 +35,18 @@ export interface ITopicContent {
   description: string[];
   note?: string;
   youtube?: string;
+}
+
+export interface IBody {
+  data: unknown;
+  code: number;
+  message: string;
+  version: string;
+}
+
+export interface IBaseResponseResponse {
+  statusCode: number;
+  headers: Record<string, string>;
+  body: string;
+  isBase64Encoded: boolean;
 }
