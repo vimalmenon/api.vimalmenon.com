@@ -1,5 +1,6 @@
+import { IBody, IBaseResponseResponse } from '@types';
+
 import packageJson from '../../package.json';
-import { IBody, IBaseResponseResponse } from '../types';
 
 export class BaseResponse {
   public message = 'Success';

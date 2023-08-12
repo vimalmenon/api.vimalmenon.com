@@ -10,6 +10,10 @@
     "esModuleInterop": true,
     "lib": ["es2015"],
     "rootDir": "./",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "@types": ["./src/types"],
+      "@common": ["./src/common"]
+    }
   }
 }
