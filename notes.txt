@@ -1,0 +1,16 @@
+tutorial:
+  type: topic
+  updatedDate:
+  createdDate:
+  topic:
+    name:
+    type: topic
+    updatedDate:
+    createdDate:
+    subject:
+      id:
+      type: subject
+      title:
+      content:
+      updatedDate:
+      createdDate:
