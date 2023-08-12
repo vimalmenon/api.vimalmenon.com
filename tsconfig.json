@@ -13,7 +13,9 @@
     "resolveJsonModule": true,
     "paths": {
       "@types": ["./src/types"],
-      "@common": ["./src/common"]
+      "@common": ["./src/common"],
+      "@helper": ["./src/helper"],
+      "@config": ["./src/config"]
     }
   }
 }
