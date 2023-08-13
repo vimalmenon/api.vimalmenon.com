@@ -11,11 +11,12 @@
     "lib": ["es2015"],
     "rootDir": "./",
     "resolveJsonModule": true,
+    "baseUrl": "./",
     "paths": {
-      "@types": ["./src/types"],
-      "@common": ["./src/common"],
-      "@helper": ["./src/helper"],
-      "@config": ["./src/config"]
+      "@types": ["src/types"],
+      "@common": ["src/common"],
+      "@helper": ["src/helper"],
+      "@config": ["src/config"]
     }
   }
 }
