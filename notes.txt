@@ -1,16 +1,41 @@
-tutorial:
-  type: topic
+content
+  appKey: string;
+  sortKey: string;
   updatedDate:
   createdDate:
-  topic:
-    name:
-    type: topic
-    updatedDate:
-    createdDate:
-    subject:
-      id:
-      type: subject
-      title:
-      content:
-      updatedDate:
-      createdDate:
+  uid:
+  name:
+  content:
+
+Tutorial:
+  appKey: string;
+  sortKey: string;
+  updatedDate:
+  createdDate:
+  uid:
+  name:
+  title:
+
+Topic:
+  appKey: string;
+  sortKey: string;
+  updatedDate:
+  createdDate:
+  uid:
+  name:
+  title:
+subject:
+  appKey: string;
+  sortKey: string;
+  updatedDate:
+  createdDate:
+  uid:
+  name:
+  content:
+SocialMedia:
+  appKey: string;
+  sortKey: string;
+  updatedDate:
+  createdDate:
+  name:
+  url:
