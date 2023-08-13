@@ -1,6 +1,9 @@
-const columns = ['name', 'url'];
+import { ISocialMedia } from '@types';
+
 import { getItems } from './db';
 
-export const getAllSocialMedia = () => {
-  return getItems({ key: 'SocialMedia', columns });
+const columns = ['name', 'url'];
+
+export const getAllSocialMedia = async () => {
+  return (await getItems({ key: 'SocialMedia', columns })).Items as ISocialMedia[];
 };
