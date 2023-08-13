@@ -1,1 +1,2 @@
-export * from './tutorials';
+export * from './tutorial';
+export * from './socialMedia';

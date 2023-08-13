@@ -29,6 +29,11 @@ export interface ITopic extends IBaseTable {
   subjectId: string;
 }
 
+export interface ISocialMedia extends IBaseTable {
+  name: string;
+  url: string;
+}
+
 export interface ITopicContent {
   code?: string;
   options?: string[];
