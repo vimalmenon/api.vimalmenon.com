@@ -1,7 +1,7 @@
 {
   "name": "api.vimalmenon.com",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.0.0",
+  "description": "Api for VimalMenon.com",
   "main": "index.js",
   "scripts": {
     "deploy": "serverless deploy",
