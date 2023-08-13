@@ -1,0 +1,44 @@
+org: vimalmenon
+app: api-vimalmenon
+service: api-vm
+frameworkVersion: '3'
+
+plugins:
+  - serverless-bundle
+  - serverless-dotenv-plugin
+  - serverless-iam-roles-per-function
+
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  deploymentMethod: direct
+  environment:
+    DB_KEY: ${env:DB_KEY}
+    DYNAMO_DB_Table: ${env:DYNAMO_DB_TABLE}
+
+functions:
+  getTutorials:
+    handler: src/tutorial/getTutorials.handler
+    events:
+      - http:
+          path: /tutorials
+          method: get
+          cors: true
+    iamRoleStatements:
+      - Effect: "Allow"        
+        Action:
+          - dynamodb:GetItem
+        Resource: "*"
+resources:
+  Resources:
+    Unauthorized:
+      Type: AWS::ApiGateway::GatewayResponse
+      Properties:
+        ResponseParameters:
+          "gatewayresponse.header.Access-Control-Allow-Origin": "'*'"
+          "gatewayresponse.header.Access-Control-Allow-Headers": "'*'"
+        ResponseType: "DEFAULT_4XX"
+        RestApiId:
+          Ref: "ApiGatewayRestApi"
