@@ -5,6 +5,6 @@
 - [ ] Add Git Workflow
 - [ ] Create DockerFile
 - [ ] Create helm chart
-- [ ] add .gittignore
-- [ ] add .gittignore
-
+- [ ] Setup CI
+- [ ] Setup CD
+- [ ] Setup linting
