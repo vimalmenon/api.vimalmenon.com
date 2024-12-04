@@ -2,7 +2,6 @@
 
 
 #### To-Do
-- [ ] Create helm chart
 - [ ] Setup flake8
 - [ ] Setup MyPy
 - [ ] Setup Black
