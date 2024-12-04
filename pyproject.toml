@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "api"
+version = "0.0.1"
+description = "APi for VimalMenon.com"
+authors = ["Vimal Menon <69777626+vimalsmenon@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {extras = ["pydantic"], version = "^0.115.5"}
+uvicorn = "^0.32.1"
+
+
+[tool.poetry.group.dev.dependencies]
+tox = "^4.23.2"
+flake8 = "^7.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+app = "main:run"
