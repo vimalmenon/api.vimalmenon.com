@@ -2,9 +2,10 @@
 
 
 #### To-Do
-- [ ] Add Git Workflow
-- [ ] Create DockerFile
+- [ ] Fix Git Workflow
+- [ ] Add tox
 - [ ] Create helm chart
 - [ ] Setup CI
 - [ ] Setup CD
 - [ ] Setup linting
+
