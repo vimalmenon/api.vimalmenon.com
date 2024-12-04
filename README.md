@@ -9,7 +9,8 @@
 - [ ] Setup Black
 - [ ] Setup CD
 - [ ] Get data from DynamoDB
-- [ ] Set up GoogleAuth
+- [ ] Set up AWS Auth
+- [ ] Set up .env
 
 #### Commands
 
