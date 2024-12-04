@@ -13,24 +13,19 @@ on:
           - Prod
 
 env:
-  DOCKER_REGISTRY : 484344126717.dkr.ecr.us-east-1.amazonaws.com
   RELEASE: github.event.inputs.Release
   APP_NAME: api.vimalmenon.com
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
   DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
 
 jobs:
-  Build:
-    name: Install
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout 
-      uses: actions/checkout@v2
   PushCode:
     name: 'Deploy Image'
     runs-on: ubuntu-latest
     steps:
-    - name: Login to ECR
+    - name: Checkout 
+      uses: actions/checkout@v2
+    - name: Login to DockerHub
       uses: docker/login-action@v1
       with:
         username: ${{ env.DOCKERHUB_USERNAME }}
