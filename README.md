@@ -1,5 +1,5 @@
 # api.vimalmenon.com
-
+Api for VimalMenon.com
 
 #### To-Do
 - [ ] Setup flake8
@@ -11,4 +11,12 @@
 - [ ] Set up K8S resources
 
 #### Commands
+Start poetry shell
+```sh
+poetry shell
+```
+Run app
+```sh
+poetry run app
+```
 
