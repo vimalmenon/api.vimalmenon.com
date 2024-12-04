@@ -3,6 +3,13 @@
 
 #### To-Do
 - [ ] Create helm chart
+- [ ] Upload the Image to dockerhub
+- [ ] Setup flake8
+- [ ] Setup MyPy
+- [ ] Setup Black
 - [ ] Setup CD
-- [ ] Setup linting
+- [ ] Get data from DynamoDB
+- [ ] Set up GoogleAuth
+
+#### Commands
 
