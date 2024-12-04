@@ -28,7 +28,6 @@ jobs:
       uses: actions/checkout@v2
   PushCode:
     name: 'Deploy Image'
-    needs: Prepare
     runs-on: ubuntu-latest
     steps:
     - name: Login to ECR
