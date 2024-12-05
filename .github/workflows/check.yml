@@ -21,5 +21,5 @@ jobs:
         pip install poetry
     - name: Run Tox
       run: |
-        poetry run tox
+        poetry run tox -r
 
