@@ -18,8 +18,8 @@ jobs:
     - name: Install Tox
       run: |
         python -m pip install --upgrade pip
-        pip install tox tox-gh-actions
+        pip install poetry
     - name: Run Tox
       run: |
-        tox
+        poetry run tox
 
