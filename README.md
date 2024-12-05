@@ -15,7 +15,7 @@ Start poetry shell
 ```sh
 poetry shell
 ```
-Run app
+Start app
 ```sh
 poetry run app
 ```
