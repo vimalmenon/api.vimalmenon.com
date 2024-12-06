@@ -1,7 +1,0 @@
-namespace: "api-vimalmenon"
-
-deployment:
-  name: "api-vimalmenon-deploy"
-  replicas: 1
-  image: "vimalsmenon/api.vimalmenon.com"
-  version: 0.0.1

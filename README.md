@@ -2,6 +2,7 @@
 Api for VimalMenon.com
 
 #### To-Do
+- [ ] Set up tox
 - [ ] Setup flake8
 - [ ] Setup MyPy
 - [ ] Setup Black
@@ -9,6 +10,7 @@ Api for VimalMenon.com
 - [ ] Set up AWS Auth
 - [ ] Set up .env
 - [ ] Set up K8S resources
+- [ ] Remove helm chart
 
 #### Commands
 Start poetry shell
