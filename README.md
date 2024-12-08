@@ -2,11 +2,10 @@
 Api for VimalMenon.com
 
 #### To-Do
-- [ ] Set up tox
-- [ ] Setup Black
 - [ ] Get data from DynamoDB
-- [ ] Set up AWS Auth
+- [ ] Set up Auth
 - [ ] Set up .env
+- [ ] Set up Pytest
 
 
 #### Commands
@@ -18,4 +17,7 @@ Start app
 ```sh
 poetry run app
 ```
-
+Run Tox
+```sh
+tox
+```
