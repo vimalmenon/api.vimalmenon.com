@@ -1,3 +1,5 @@
 .venv
 .tox
 __pycache__
+.env
+
