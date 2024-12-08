@@ -6,7 +6,7 @@ Api for VimalMenon.com
 - [ ] Set up Auth
 - [ ] Set up .env
 - [ ] Set up Pytest
-
+- [ ] Create a working dir for Docker
 
 #### Commands
 Start poetry shell
