@@ -1,7 +1,10 @@
 import uvicorn
 from fastapi import FastAPI
 
-app = FastAPI()
+from api.config.env import env
+
+
+app = FastAPI(debug=env.debug)
 
 
 @app.get("/")
