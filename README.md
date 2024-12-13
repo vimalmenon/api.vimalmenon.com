@@ -10,6 +10,7 @@ API for VimalMenon.com
 - [ ] Set up .env
 - [ ] Set up Pytest
 - [ ] Need to set up logs collections
+- [ ] Start the app in dev mode
 
 #### Commands
 
