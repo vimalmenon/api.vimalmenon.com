@@ -5,9 +5,10 @@ API for VimalMenon.com
 #### To-Do
 
 - [ ] Get data from DynamoDB
-- [ ] Set up Auth
+- [ ] Set up Auth with AWX cognito
 - [ ] Set up .env
 - [ ] Set up Pytest
+- [ ] Need to set up logs collections
 
 #### Commands
 
@@ -15,7 +16,6 @@ Start poetry shell
 
 ```sh
 poetry shell
-
 ```
 
 Start app
