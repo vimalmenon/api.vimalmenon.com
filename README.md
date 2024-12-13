@@ -5,6 +5,7 @@ API for VimalMenon.com
 #### To-Do
 
 - [ ] Get data from DynamoDB
+- [ ] Post data from DynamoDB
 - [ ] Set up Auth with AWX cognito
 - [ ] Set up .env
 - [ ] Set up Pytest
