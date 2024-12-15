@@ -1,15 +1,15 @@
-import boto3
 import uuid
 from api.managers.dynamodb.table_abstract import TableAbstract
 from api.serializers.vim_command import VimCommand, DeleteVimCommand
 from api.config.env import env
-
-dynamodb = boto3.resource("dynamodb")
+from api.managers.aws.session import Session
 
 
 class DynamoDbTable(TableAbstract):
 
     def __init__(self):
+        session = Session().get_session()
+        dynamodb = session.resource("dynamodb")
         self.table = dynamodb.Table(env.table)
 
     def get_creation_data(self):
