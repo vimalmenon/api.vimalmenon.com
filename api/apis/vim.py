@@ -2,7 +2,7 @@ from fastapi import APIRouter
 
 from api.managers.dynamodb.dynamo_db_table import DynamoDbTable
 from api.services.vim_service import VimService
-from api.serializers.vim_command import VimCommand, DeleteVimCommand
+from api.serializers.vim_command import VimCommand, DeleteVimCommand, UpdateVimCommand
 
 
 route = APIRouter()
@@ -21,3 +21,8 @@ async def post_data(data: VimCommand):
 @route.delete("/", tags=["vim"])
 async def delete_data(data: DeleteVimCommand):
     return VimService().delete_data(data.id)
+
+
+@route.put("/", tags=["vim"])
+async def update_data(data: UpdateVimCommand):
+    pass
