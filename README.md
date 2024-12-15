@@ -23,6 +23,12 @@ Start poetry shell
 poetry shell
 ```
 
+Start app in Dev Mode
+
+```sh
+poetry run fastapi dev main.py
+```
+
 Start app
 
 ```sh
