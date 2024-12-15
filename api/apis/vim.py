@@ -1,6 +1,5 @@
 from fastapi import APIRouter
 
-from api.managers.dynamodb.dynamo_db_table import DynamoDbTable
 from api.services.vim_service import VimService
 from api.serializers.vim_command import VimCommand, DeleteVimCommand, UpdateVimCommand
 
@@ -10,7 +9,7 @@ route = APIRouter()
 
 @route.get("/", tags=["vim"])
 async def get_data():
-    return DynamoDbTable().get_items()
+    return VimService().scan_item()
 
 
 @route.post("/", tags=["vim"])
