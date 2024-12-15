@@ -2,9 +2,11 @@ import uvicorn
 from fastapi import FastAPI
 
 from api.config.env import env
-
+from api.apis.vim import route as vim_route
 
 app = FastAPI(debug=env.debug)
+
+app.include_router(vim_route, prefix="/vim")
 
 
 @app.get("/")
