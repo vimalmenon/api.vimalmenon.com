@@ -33,4 +33,4 @@ class DynamoDbTable(TableAbstract):
         return ""
 
     def delete_item(self, id: str):
-        return {"delete": id}
+        return self.table.delete_item(Key={"id": id, "app": "vm#vim"})
