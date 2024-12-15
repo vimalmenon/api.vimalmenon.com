@@ -17,3 +17,7 @@ class TableAbstract(ABC):
     @abstractmethod
     def delete_item(self, data):
         pass
+
+    @abstractmethod
+    def update_item(self, data):
+        pass

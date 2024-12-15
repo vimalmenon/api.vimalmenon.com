@@ -31,3 +31,6 @@ class DynamoDbTable(TableAbstract):
 
     def delete_item(self, data: DeleteVimCommand):
         return self.table.delete_item(Key={"id": data.id, "app": data.app})
+
+    def update_item(self, data):
+        pass
