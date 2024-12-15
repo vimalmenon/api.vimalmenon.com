@@ -19,7 +19,7 @@ class DynamoDbTable(TableAbstract):
         return self.table.scan()
 
     def add_item(self, data: VimCommand):
-        result = self.table.put_item(
+        return self.table.put_item(
             Item={
                 "id": str(uuid.uuid4()),
                 "app": "vm#vim",
@@ -28,8 +28,6 @@ class DynamoDbTable(TableAbstract):
                 "language": data.language,
             }
         )
-        print(result)
-        return ""
 
     def delete_item(self, data: DeleteVimCommand):
         return self.table.delete_item(Key={"id": data.id, "app": data.app})
