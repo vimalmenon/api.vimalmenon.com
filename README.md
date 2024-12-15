@@ -5,12 +5,15 @@ API for VimalMenon.com
 #### To-Do
 
 - [ ] Get data from DynamoDB
-- [ ] Post data from DynamoDB
+- [ ] Insert data from DynamoDB
+- [ ] Delete data from DynamoDB
+- [ ] Update data to DynamoDB
 - [ ] Set up Auth with AWX cognito
 - [ ] Set up .env
 - [ ] Set up Pytest
 - [ ] Need to set up logs collections
 - [ ] Start the app in dev mode
+- [ ] Hot reload in dev mode
 
 #### Commands
 
