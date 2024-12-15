@@ -20,7 +20,7 @@ async def post_data(data: VimCommand):
 
 @route.delete("/", tags=["vim"])
 async def delete_data(data: DeleteVimCommand):
-    return VimService().delete_data(data.id)
+    return VimService().delete_data(data)
 
 
 @route.put("/", tags=["vim"])

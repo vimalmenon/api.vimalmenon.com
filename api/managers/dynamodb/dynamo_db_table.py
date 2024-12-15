@@ -1,7 +1,7 @@
 import boto3
 import uuid
 from api.managers.dynamodb.table_abstract import TableAbstract
-from api.serializers.vim_command import VimCommand
+from api.serializers.vim_command import VimCommand, DeleteVimCommand
 from api.config.env import env
 
 dynamodb = boto3.resource("dynamodb")
@@ -29,8 +29,7 @@ class DynamoDbTable(TableAbstract):
             }
         )
         print(result)
-        breakpoint()
         return ""
 
-    def delete_item(self, id: str):
-        return self.table.delete_item(Key={"id": id, "app": "vm#vim"})
+    def delete_item(self, data: DeleteVimCommand):
+        return self.table.delete_item(Key={"id": data.id, "app": data.app})
