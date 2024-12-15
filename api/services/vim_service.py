@@ -1,5 +1,5 @@
 from api.managers.dynamodb.dynamo_db_table import DynamoDbTable
-from api.serializers.vim_command import DeleteVimCommand
+from api.serializers.vim_command import DeleteVimCommand, VimCommand
 
 
 class VimService:
@@ -14,8 +14,8 @@ class VimService:
     def update_data(self):
         pass
 
-    def add_data(self):
-        pass
+    def add_data(self, data: VimCommand):
+        return self.dynamodb.add_item(data)
 
     def delete_data(self, data: DeleteVimCommand):
         return self.dynamodb.delete_item(data)

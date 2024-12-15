@@ -15,7 +15,7 @@ async def get_data():
 
 @route.post("/", tags=["vim"])
 async def post_data(data: VimCommand):
-    return DynamoDbTable().add_item(data)
+    return VimService().add_data(data)
 
 
 @route.delete("/", tags=["vim"])
