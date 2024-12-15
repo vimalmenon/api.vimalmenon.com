@@ -38,5 +38,5 @@ poetry run app
 Run Tox
 
 ```sh
-tox
+poetry run tox
 ```
