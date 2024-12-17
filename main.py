@@ -1,5 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from api.config.env import env
 from api.apis.vim import route as vim_route
@@ -7,6 +8,15 @@ from api.apis.vim import route as vim_route
 app = FastAPI(debug=env.debug)
 
 app.include_router(vim_route, prefix="/vim")
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
