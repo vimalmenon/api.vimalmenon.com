@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
 from api.services.vim_service import VimService
-from api.serializers.vim_command import VimCommand, DeleteVimCommand, UpdateVimCommand
+from api.serializers.vim_command import VimCommand, UpdateVimCommand
 
 
 route = APIRouter()
@@ -17,9 +17,9 @@ async def post_data(data: VimCommand):
     return VimService().add_data(data)
 
 
-@route.delete("/", tags=["vim"])
-async def delete_data(data: DeleteVimCommand):
-    return VimService().delete_data(data)
+@route.delete("/{id}", tags=["vim"])
+async def delete_data(id: str):
+    return VimService().delete_data(id)
 
 
 @route.put("/", tags=["vim"])

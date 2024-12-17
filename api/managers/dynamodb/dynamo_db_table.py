@@ -1,6 +1,6 @@
 import uuid
 from api.managers.dynamodb.table_abstract import TableAbstract
-from api.serializers.vim_command import VimCommand, DeleteVimCommand
+from api.serializers.vim_command import VimCommand
 from api.config.env import env
 from api.managers.aws.session import Session
 
@@ -29,8 +29,8 @@ class DynamoDbTable(TableAbstract):
             }
         )
 
-    def delete_item(self, data: DeleteVimCommand):
-        return self.table.delete_item(Key={"id": data.id, "app": data.app})
+    def delete_item(self, id: str):
+        return self.table.delete_item(Key={"id": id, "app": "vm#vim"})
 
     def update_item(self, data):
         pass
