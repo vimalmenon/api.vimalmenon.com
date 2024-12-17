@@ -1,5 +1,6 @@
 from api.managers.dynamodb.dynamo_db_table import DynamoDbTable
 from api.serializers.vim_command import DeleteVimCommand, VimCommand
+from api.models.vim_model import VimModel
 
 
 class VimService:
@@ -21,4 +22,12 @@ class VimService:
         return self.dynamodb.delete_item(data)
 
     def scan_item(self):
-        return self.dynamodb.get_items()
+        result = self.dynamodb.get_items()
+        return [
+            VimModel(
+                describe=item["describe"],
+                command=item["command"],
+                language=item["language"],
+            )
+            for item in result["Items"]
+        ]
