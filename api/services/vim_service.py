@@ -25,6 +25,7 @@ class VimService:
         result = self.dynamodb.get_items()
         return [
             VimModel(
+                id=item["id"],
                 describe=item["describe"],
                 command=item["command"],
                 language=item["language"],
