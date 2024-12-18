@@ -5,6 +5,8 @@ API for VimalMenon.com
 #### To-Do
 
 - [ ] Update data to DynamoDB
+- [ ] Show date while adding
+- [ ] Show Updated date while updating
 - [ ] Upload data to S3
 - [ ] Read data from S3
 - [ ] Delete data from S3
