@@ -4,9 +4,6 @@ API for VimalMenon.com
 
 #### To-Do
 
-- [ ] Get data from DynamoDB
-- [ ] Insert data from DynamoDB
-- [ ] Delete data from DynamoDB
 - [ ] Update data to DynamoDB
 - [ ] Upload data to S3
 - [ ] Read data from S3
