@@ -9,7 +9,6 @@ class VimCommand(BaseModel):
 
 class UpdateVimCommand(BaseModel):
     id: str
-    app: str
     describe: str
     command: str
     language: str

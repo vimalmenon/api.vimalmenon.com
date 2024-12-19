@@ -33,4 +33,21 @@ class DynamoDbTable(TableAbstract):
         return self.table.delete_item(Key={"id": id, "app": "vm#vim"})
 
     def update_item(self, data):
+        return self.table.update_item(
+            Key={
+                "id": data.id,
+                "app": "vm#vim",
+            },
+            UpdateExpression="Set #describe = :describe, #command =:command, #language = :language",
+            ExpressionAttributeValues={
+                ":describe": data.describe,
+                ":command": data.command,
+                ":language": data.language,
+            },
+            ExpressionAttributeNames={
+                "#describe": "describe",
+                "#command": "command",
+                "#language": "langauge",
+            },
+        )
         pass

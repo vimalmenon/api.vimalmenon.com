@@ -1,5 +1,5 @@
 from api.managers.dynamodb.dynamo_db_table import DynamoDbTable
-from api.serializers.vim_command import VimCommand
+from api.serializers.vim_command import VimCommand, UpdateVimCommand
 from api.models.vim_model import VimModel
 
 
@@ -12,8 +12,8 @@ class VimService:
     def get_data(self):
         pass
 
-    def update_data(self):
-        pass
+    def update_data(self, data: UpdateVimCommand):
+        return self.dynamodb.update_item(data)
 
     def add_data(self, data: VimCommand):
         return self.dynamodb.add_item(data)
