@@ -68,7 +68,7 @@ class DynamoDbTable(TableAbstract):
                 "#describe": "describe",
                 "#command": "command",
                 "#language": "langauge",
-                "#updated:date": "updated_date",
+                "#updated_date": "updated_date",
             },
         )
 
