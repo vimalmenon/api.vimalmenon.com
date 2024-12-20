@@ -4,6 +4,8 @@ from api.serializers.vim_command import VimCommand
 from api.config.env import env
 from api.managers.aws.session import Session
 from boto3.dynamodb.conditions import Attr
+from botocore.exceptions import ClientError
+from api.exceptions.exception import DbException
 
 
 class DynamoDbTable(TableAbstract):
@@ -17,7 +19,10 @@ class DynamoDbTable(TableAbstract):
         return self.table.creation_date_time
 
     def get_items(self):
-        return self.table.query(FilterExpression=Attr("app").eq("vm#vim"))
+        try:
+            return self.table.scan(FilterExpression=Attr("app").eq("vm#vim"))
+        except ClientError:
+            raise DbException(detail="Error while quering data")
 
     def add_item(self, data: VimCommand):
         return self.table.put_item(
