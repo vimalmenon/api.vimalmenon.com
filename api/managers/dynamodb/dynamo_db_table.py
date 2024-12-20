@@ -6,6 +6,7 @@ from api.managers.aws.session import Session
 from boto3.dynamodb.conditions import Attr
 from botocore.exceptions import ClientError
 from api.exceptions.exception import DbException
+from datetime import datetime
 
 
 class DynamoDbTable(TableAbstract):
@@ -33,6 +34,7 @@ class DynamoDbTable(TableAbstract):
                     "describe": data.describe,
                     "command": data.command,
                     "language": data.language,
+                    "creation_date": datetime.now().isoformat(),
                 }
             )
         except ClientError:
@@ -50,16 +52,23 @@ class DynamoDbTable(TableAbstract):
                 "id": data.id,
                 "app": "vm#vim",
             },
-            UpdateExpression="Set #describe = :describe, #command =:command, #language = :language",
+            UpdateExpression="""
+            Set #describe = :describe,
+            #command = :command,
+            #language = :language,
+            #updated_date = :updated_date
+            """,
             ExpressionAttributeValues={
                 ":describe": data.describe,
                 ":command": data.command,
                 ":language": data.language,
+                ":updated_date": datetime.now().isoformat(),
             },
             ExpressionAttributeNames={
                 "#describe": "describe",
                 "#command": "command",
                 "#language": "langauge",
+                "#updated:date": "updated_date",
             },
         )
 
