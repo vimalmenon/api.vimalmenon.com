@@ -25,18 +25,24 @@ class DynamoDbTable(TableAbstract):
             raise DbException(detail="Error while quering data")
 
     def add_item(self, data: VimCommand):
-        return self.table.put_item(
-            Item={
-                "id": str(uuid.uuid4()),
-                "app": "vm#vim",
-                "describe": data.describe,
-                "command": data.command,
-                "language": data.language,
-            }
-        )
+        try:
+            return self.table.put_item(
+                Item={
+                    "id": str(uuid.uuid4()),
+                    "app": "vm#vim",
+                    "describe": data.describe,
+                    "command": data.command,
+                    "language": data.language,
+                }
+            )
+        except ClientError:
+            raise DbException(detail="Error while deleting data")
 
     def delete_item(self, id: str):
-        return self.table.delete_item(Key={"id": id, "app": "vm#vim"})
+        try:
+            return self.table.delete_item(Key={"id": id, "app": "vm#vim"})
+        except ClientError:
+            raise DbException(detail="Error while deleting data")
 
     def update_item(self, data):
         return self.table.update_item(
