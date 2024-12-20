@@ -12,7 +12,7 @@ async def get_data():
     return VimService().scan_item()
 
 
-@route.post("/", tags=["vim"])
+@route.post("/", tags=["vim"], status_code=201)
 async def post_data(data: VimCommand):
     return VimService().add_data(data)
 

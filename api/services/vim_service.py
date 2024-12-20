@@ -16,7 +16,9 @@ class VimService:
         return self.dynamodb.update_item(data)
 
     def add_data(self, data: VimCommand):
-        return self.dynamodb.add_item(data)
+        result = self.dynamodb.add_item(data)
+        if result["ResponseMetadata"]["HTTPStatusCode"] == 200:
+            return True
 
     def delete_data(self, id: str):
         return self.dynamodb.delete_item(id)
