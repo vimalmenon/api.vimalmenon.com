@@ -50,4 +50,3 @@ class DynamoDbTable(TableAbstract):
                 "#language": "langauge",
             },
         )
-        pass
