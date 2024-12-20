@@ -17,11 +17,11 @@ class VimService:
 
     def add_data(self, data: VimCommand):
         result = self.dynamodb.add_item(data)
-        if result["ResponseMetadata"]["HTTPStatusCode"] == 200:
-            return True
+        return result["ResponseMetadata"]["HTTPStatusCode"] == 200
 
     def delete_data(self, id: str):
-        return self.dynamodb.delete_item(id)
+        result = self.dynamodb.delete_item(id)
+        return result["ResponseMetadata"]["HTTPStatusCode"] == 200
 
     def scan_item(self):
         result = self.dynamodb.get_items()
