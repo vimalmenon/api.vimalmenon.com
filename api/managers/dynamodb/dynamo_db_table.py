@@ -3,6 +3,7 @@ from api.managers.dynamodb.table_abstract import TableAbstract
 from api.serializers.vim_command import VimCommand
 from api.config.env import env
 from api.managers.aws.session import Session
+from boto3.dynamodb.conditions import Attr
 
 
 class DynamoDbTable(TableAbstract):
@@ -16,7 +17,7 @@ class DynamoDbTable(TableAbstract):
         return self.table.creation_date_time
 
     def get_items(self):
-        return self.table.scan()
+        return self.table.query(FilterExpression=Attr("app").eq("vm#vim"))
 
     def add_item(self, data: VimCommand):
         return self.table.put_item(
@@ -50,3 +51,6 @@ class DynamoDbTable(TableAbstract):
                 "#language": "langauge",
             },
         )
+
+    def scan_items(self):
+        return self.table.scan()

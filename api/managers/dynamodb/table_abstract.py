@@ -21,3 +21,7 @@ class TableAbstract(ABC):
     @abstractmethod
     def update_item(self, data):
         pass
+
+    @abstractmethod
+    def scan_items(self):
+        pass
