@@ -1,9 +1,9 @@
 import uvicorn
+from api.apis.vim import route as vim_route
+from api.config.env import env
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from api.config.env import env
-from api.apis.vim import route as vim_route
 
 app = FastAPI(debug=env.debug)
 
