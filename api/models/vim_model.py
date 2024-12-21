@@ -7,3 +7,4 @@ class VimModel:
     describe: str
     command: str
     language: str
+    tags: list[str]

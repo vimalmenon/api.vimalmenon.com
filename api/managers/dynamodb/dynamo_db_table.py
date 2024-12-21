@@ -1,12 +1,14 @@
 import uuid
+from datetime import datetime
+
+
+from api.config.env import env
+from api.exceptions.exception import DbException
+from api.managers.aws.session import Session
 from api.managers.dynamodb.table_abstract import TableAbstract
 from api.serializers.vim_command import VimCommand
-from api.config.env import env
-from api.managers.aws.session import Session
 from boto3.dynamodb.conditions import Attr
 from botocore.exceptions import ClientError
-from api.exceptions.exception import DbException
-from datetime import datetime
 
 
 class DynamoDbTable(TableAbstract):
@@ -34,6 +36,7 @@ class DynamoDbTable(TableAbstract):
                     "describe": data.describe,
                     "command": data.command,
                     "language": data.language,
+                    "tags": data.tags,
                     "creation_date": datetime.now().isoformat(),
                 }
             )
@@ -56,18 +59,21 @@ class DynamoDbTable(TableAbstract):
             Set #describe = :describe,
             #command = :command,
             #language = :language,
-            #updated_date = :updated_date
+            #updated_date = :updated_date,
+            #tags = :tags
             """,
             ExpressionAttributeValues={
                 ":describe": data.describe,
                 ":command": data.command,
                 ":language": data.language,
+                ":tags": data.tags,
                 ":updated_date": datetime.now().isoformat(),
             },
             ExpressionAttributeNames={
                 "#describe": "describe",
                 "#command": "command",
-                "#language": "langauge",
+                "#language": "language",
+                "#tags": "tags",
                 "#updated_date": "updated_date",
             },
         )

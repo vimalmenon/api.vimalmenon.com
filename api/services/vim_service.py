@@ -1,6 +1,6 @@
 from api.managers.dynamodb.dynamo_db_table import DynamoDbTable
-from api.serializers.vim_command import VimCommand, UpdateVimCommand
 from api.models.vim_model import VimModel
+from api.serializers.vim_command import UpdateVimCommand, VimCommand
 
 
 class VimService:
@@ -31,6 +31,7 @@ class VimService:
                 describe=item["describe"],
                 command=item["command"],
                 language=item["language"],
+                tags=item.get("tags", []),
             )
             for item in result["Items"]
         ]
