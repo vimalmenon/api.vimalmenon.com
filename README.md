@@ -4,8 +4,7 @@ API for VimalMenon.com
 
 #### To-Do
 
-- [ ] Show created date while adding
-- [ ] Show updated date while updating
+- [ ] Fix order import issue
 - [ ] Upload data to S3
 - [ ] Read data from S3
 - [ ] Delete data from S3
