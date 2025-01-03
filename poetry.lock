@@ -78,17 +78,17 @@ uvloop = ["uvloop (>=0.15.2)"]
 
 [[package]]
 name = "boto3"
-version = "1.35.90"
+version = "1.35.92"
 description = "The AWS SDK for Python"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "boto3-1.35.90-py3-none-any.whl", hash = "sha256:b0874233057995a8f0c813f5b45a36c09630e74c43d7a7c64db2feef2915d493"},
-    {file = "boto3-1.35.90.tar.gz", hash = "sha256:dc56caaaab2157a4bfc109c88b50cd032f3ac66c06d17f8ee335b798eaf53e5c"},
+    {file = "boto3-1.35.92-py3-none-any.whl", hash = "sha256:786930d5f1cd13d03db59ff2abbb2b7ffc173fd66646d5d8bee07f316a5f16ca"},
+    {file = "boto3-1.35.92.tar.gz", hash = "sha256:f7851cb320dcb2a53fc73b4075187ec9b05d51291539601fa238623fdc0e8cd3"},
 ]
 
 [package.dependencies]
-botocore = ">=1.35.90,<1.36.0"
+botocore = ">=1.35.92,<1.36.0"
 jmespath = ">=0.7.1,<2.0.0"
 s3transfer = ">=0.10.0,<0.11.0"
 
@@ -97,13 +97,13 @@ crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
 
 [[package]]
 name = "boto3-stubs"
-version = "1.35.90"
-description = "Type annotations for boto3 1.35.90 generated with mypy-boto3-builder 8.7.0"
+version = "1.35.92"
+description = "Type annotations for boto3 1.35.92 generated with mypy-boto3-builder 8.7.1"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "boto3_stubs-1.35.90-py3-none-any.whl", hash = "sha256:68f384c11267c0eac982e041e4af0bc88efae6816b8def74aca40de76acbd45d"},
-    {file = "boto3_stubs-1.35.90.tar.gz", hash = "sha256:23a3834d51c603b808847df5dd56b6c75d9c39e897848e65570d86b415d5f469"},
+    {file = "boto3_stubs-1.35.92-py3-none-any.whl", hash = "sha256:8d23b03ab9ca88bedc432adb08fd179bf1efd178128704cad80c138062b8f8a3"},
+    {file = "boto3_stubs-1.35.92.tar.gz", hash = "sha256:f2af463889d37fbab23c7cd08fb1b035f123ad67e4b3efc46f7714f9abee5e57"},
 ]
 
 [package.dependencies]
@@ -159,7 +159,7 @@ bedrock-data-automation-runtime = ["mypy-boto3-bedrock-data-automation-runtime (
 bedrock-runtime = ["mypy-boto3-bedrock-runtime (>=1.35.0,<1.36.0)"]
 billing = ["mypy-boto3-billing (>=1.35.0,<1.36.0)"]
 billingconductor = ["mypy-boto3-billingconductor (>=1.35.0,<1.36.0)"]
-boto3 = ["boto3 (==1.35.90)"]
+boto3 = ["boto3 (==1.35.92)"]
 braket = ["mypy-boto3-braket (>=1.35.0,<1.36.0)"]
 budgets = ["mypy-boto3-budgets (>=1.35.0,<1.36.0)"]
 ce = ["mypy-boto3-ce (>=1.35.0,<1.36.0)"]
@@ -524,13 +524,13 @@ xray = ["mypy-boto3-xray (>=1.35.0,<1.36.0)"]
 
 [[package]]
 name = "botocore"
-version = "1.35.90"
+version = "1.35.92"
 description = "Low-level, data-driven core of boto 3."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "botocore-1.35.90-py3-none-any.whl", hash = "sha256:51dcbe1b32e2ac43dac17091f401a00ce5939f76afe999081802009cce1e92e4"},
-    {file = "botocore-1.35.90.tar.gz", hash = "sha256:f007f58e8e3c1ad0412a6ddfae40ed92a7bca571c068cb959902bcf107f2ae48"},
+    {file = "botocore-1.35.92-py3-none-any.whl", hash = "sha256:f94ae1e056a675bd67c8af98a6858d06e3927d974d6c712ed6e27bb1d11bee1d"},
+    {file = "botocore-1.35.92.tar.gz", hash = "sha256:caa7d5d857fed5b3d694b89c45f82b9f938f840e90a4eb7bf50aa65da2ba8f82"},
 ]
 
 [package.dependencies]
@@ -543,13 +543,13 @@ crt = ["awscrt (==0.22.0)"]
 
 [[package]]
 name = "botocore-stubs"
-version = "1.35.90"
+version = "1.35.92"
 description = "Type annotations and code completion for botocore"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "botocore_stubs-1.35.90-py3-none-any.whl", hash = "sha256:f7fd78d84f49d28692662b9bdeb4c92f1bf8a5707d0c28c8544399005b02823b"},
-    {file = "botocore_stubs-1.35.90.tar.gz", hash = "sha256:c6b294cae436eaaf87dcb717e4348c250ea1fc170336579da114b693663d8e42"},
+    {file = "botocore_stubs-1.35.92-py3-none-any.whl", hash = "sha256:e116a2b84f67b84bbaa9a00577256664907d7c6a517fa0b1a3be7903fd6d0040"},
+    {file = "botocore_stubs-1.35.92.tar.gz", hash = "sha256:c02ae70588e20d15a8100b34c1a1ebfa5f08e856f60570db0d16b128dc4c5c24"},
 ]
 
 [package.dependencies]
@@ -1737,13 +1737,13 @@ test = ["aiohttp (>=3.10.5)", "flake8 (>=5.0,<6.0)", "mypy (>=0.800)", "psutil",
 
 [[package]]
 name = "virtualenv"
-version = "20.28.0"
+version = "20.28.1"
 description = "Virtual Python Environment builder"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "virtualenv-20.28.0-py3-none-any.whl", hash = "sha256:23eae1b4516ecd610481eda647f3a7c09aea295055337331bb4e6892ecce47b0"},
-    {file = "virtualenv-20.28.0.tar.gz", hash = "sha256:2c9c3262bb8e7b87ea801d715fae4495e6032450c71d2309be9550e7364049aa"},
+    {file = "virtualenv-20.28.1-py3-none-any.whl", hash = "sha256:412773c85d4dab0409b83ec36f7a6499e72eaf08c80e81e9576bca61831c71cb"},
+    {file = "virtualenv-20.28.1.tar.gz", hash = "sha256:5d34ab240fdb5d21549b76f9e8ff3af28252f5499fb6d6f031adac4e5a8c5329"},
 ]
 
 [package.dependencies]
@@ -1919,4 +1919,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "c459fc0fd86acdf8f64afa54c9db7f07a126908d40108bd37f883daf4dc77cf0"
+content-hash = "5eace775528e1f5b2f4c97842fa9a2e4e52b58a919afeb5f6561fc1efc8cf43f"
