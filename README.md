@@ -12,6 +12,7 @@ API for VimalMenon.com
 - [ ] Set up Pytest
 - [ ] Need to set up logs collections
 - [ ] Need to set up CORS
+- [ ] Add test for backend
 
 #### Commands
 
