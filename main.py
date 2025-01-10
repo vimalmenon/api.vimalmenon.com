@@ -1,4 +1,5 @@
 import uvicorn
+from api.apis.admin.vim import route as admin_route
 from api.apis.link import route as link_router
 from api.apis.vim import route as vim_route
 from api.config.env import env
@@ -10,6 +11,7 @@ app = FastAPI(debug=env.debug)
 
 app.include_router(vim_route, prefix="/vim")
 app.include_router(link_router, prefix="/links")
+app.include_router(admin_route, prefix="/admin/vim")
 
 
 app.add_middleware(
